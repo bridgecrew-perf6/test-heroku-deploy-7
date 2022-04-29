@@ -8,3 +8,7 @@ express()
   .set("view engine", "ejs")
   .get("/", (req, res) => res.render("pages/index"))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+  app.get("/hero", (req, res)=>{
+    res.send("hero meets heroku")
+  })
